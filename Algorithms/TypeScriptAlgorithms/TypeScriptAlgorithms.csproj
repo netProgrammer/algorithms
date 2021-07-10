@@ -4,4 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <TypeScriptCompile Include="scripts\app.ts" />
+      <TypeScriptCompile Include="scripts\linked-list\LinkedList.ts" />
+      <TypeScriptCompile Include="scripts\linked-list\LinkedListNode.ts" />
+      <TypeScriptCompile Include="scripts\utils\Comparator.ts" />
+    </ItemGroup>
 </Project>
