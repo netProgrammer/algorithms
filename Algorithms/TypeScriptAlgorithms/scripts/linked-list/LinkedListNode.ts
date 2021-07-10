@@ -1,12 +1,12 @@
 ﻿export default class LinkedListNode {
-    private readonly value: number;
-    private next: LinkedListNode;
-    constructor(value: number, next: LinkedListNode = null) {
+    public readonly value: string | number;
+    next: LinkedListNode;
+    constructor(value: string | number, next: LinkedListNode = null) {
         this.value = value;
         this.next = next;
     }
 
-    toString(callback){
+    toString(callback: any){
         return callback ? callback(this.value) : `${this.value}`;
     }
 }

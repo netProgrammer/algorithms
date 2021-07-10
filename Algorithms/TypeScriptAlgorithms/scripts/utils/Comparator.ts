@@ -1,11 +1,15 @@
-﻿export default class Comparator {
+﻿export interface ICompareFunction {
+    (a: string | number, b: string | number): number;
+}
+
+export class Comparator {
     private compare: any;
 
     /**
      * Constructor
      * @param compareFunction - It may be custom compare function
      */
-    constructor(compareFunction) {
+    constructor(compareFunction: ICompareFunction) {
         this.compare = compareFunction || Comparator.defaultCompareFunction;
     }
 
@@ -26,7 +30,7 @@
      * @param a
      * @param b
      */
-    equal (a,b){
+    equal (a: string | number, b: string | number){
         return this.compare(a, b) === 0;
     }
 
@@ -35,7 +39,7 @@
      * @param a
      * @param b
      */
-    lessThan(a,b){
+    lessThan(a: string | number, b: string | number){
         return this.compare(a, b) < 0;
     }
 
@@ -44,7 +48,7 @@
      * @param a
      * @param b
      */
-    greaterThan(a,b){
+    greaterThan(a: string | number, b: string | number){
         return this.compare(a, b) > 0;
     }
 
@@ -53,7 +57,7 @@
      * @param a
      * @param b
      */
-    lessThanOrEqual(a,b){
+    lessThanOrEqual(a: string | number, b: string | number){
         return this.lessThan(a, b) || this.equal(a, b);
     }
 
@@ -62,7 +66,7 @@
      * @param a
      * @param b
      */
-    greaterThanOrEqual(a,b){
+    greaterThanOrEqual(a: string | number, b: string | number){
         return this.greaterThan(a, b) || this.equal(a, b);
     }
 
@@ -71,6 +75,6 @@
      */
     reverse(){
         const compareOriginal = this.compare;
-        this.compare = (a,b) => compareOriginal(b,a);
+        this.compare = (a: string | number, b: string | number) => compareOriginal(b,a);
     }
 }
