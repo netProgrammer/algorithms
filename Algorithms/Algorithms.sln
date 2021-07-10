@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis", "Analysis\Analys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAlgorithms", "TestAlgorithms\TestAlgorithms.csproj", "{A0E6D75A-89C9-4BFB-AAC1-14D97EA0C2D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScriptAlgorithms", "TypeScriptAlgorithms\TypeScriptAlgorithms.csproj", "{FC62DFF9-5E86-4284-8E09-4D82D28B2819}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A0E6D75A-89C9-4BFB-AAC1-14D97EA0C2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E6D75A-89C9-4BFB-AAC1-14D97EA0C2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E6D75A-89C9-4BFB-AAC1-14D97EA0C2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC62DFF9-5E86-4284-8E09-4D82D28B2819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC62DFF9-5E86-4284-8E09-4D82D28B2819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC62DFF9-5E86-4284-8E09-4D82D28B2819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC62DFF9-5E86-4284-8E09-4D82D28B2819}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
