@@ -9,6 +9,7 @@
       <TypeScriptCompile Include="scripts\linked-list\LinkedList.ts" />
       <TypeScriptCompile Include="scripts\linked-list\LinkedListNode.ts" />
       <TypeScriptCompile Include="scripts\queue\Queue.ts" />
+      <TypeScriptCompile Include="scripts\stack\Stack.ts" />
       <TypeScriptCompile Include="scripts\utils\Comparator.ts" />
     </ItemGroup>
 </Project>
