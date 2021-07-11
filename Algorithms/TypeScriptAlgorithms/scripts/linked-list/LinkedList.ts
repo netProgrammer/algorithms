@@ -2,15 +2,15 @@
 import {Comparator, ICompareFunction} from "../utils/Comparator";
 
 export default class LinkedList {
-    private head: LinkedListNode;
-    private tail: LinkedListNode;
+    public head: LinkedListNode;
+    public tail: LinkedListNode;
     private compare: Comparator;
 
     /**
      * Constructor
      * @param comparatorFunction
      */
-    constructor(comparatorFunction: ICompareFunction) {
+    constructor(comparatorFunction: ICompareFunction = null) {
         this.head = null;
         this.tail = null;
         this.compare = new Comparator(comparatorFunction);
