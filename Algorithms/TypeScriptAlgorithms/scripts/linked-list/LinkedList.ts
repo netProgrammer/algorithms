@@ -1,4 +1,4 @@
-﻿import LinkedListNode from "./LinkedListNode";
+﻿import {IHash, LinkedListNode} from "./LinkedListNode";
 import {Comparator, ICompareFunction} from "../utils/Comparator";
 
 export default class LinkedList {
@@ -20,7 +20,7 @@ export default class LinkedList {
      * Add new list element
      * @param value
      */
-    prepend(value: string | number): LinkedList {
+    prepend(value: string | number | IHash): LinkedList {
         // Make new node to be a head
         const newNode = new LinkedListNode(value, this.head);
         this.head = newNode;
@@ -32,7 +32,7 @@ export default class LinkedList {
         return this;
     }
 
-    append(value: string | number): LinkedList {
+    append(value: string | number | IHash): LinkedList {
         const newNode = new LinkedListNode(value);
 
         // If there is no head yet let's make new node a head.
@@ -50,7 +50,7 @@ export default class LinkedList {
         return this;
     }
 
-    delete(value: string | number): LinkedListNode {
+    delete(value: string | number | IHash): LinkedListNode {
         if (!this.head) {
             return null;
         }
@@ -152,7 +152,7 @@ export default class LinkedList {
     }
 
     fromArray(values: string[] | number[]){
-        values.forEach((value: string | number) => this.append(value));
+        values.forEach((value: string | number | IHash) => this.append(value));
         return this;
     }
 

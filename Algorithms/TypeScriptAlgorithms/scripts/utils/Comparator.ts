@@ -1,5 +1,7 @@
-﻿export interface ICompareFunction {
-    (a: string | number, b: string | number): number;
+﻿import {IHash} from "../linked-list/LinkedListNode";
+
+export interface ICompareFunction {
+    (a: string | number | IHash, b: string | number | IHash): number;
 }
 
 export class Comparator {
@@ -18,7 +20,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    static defaultCompareFunction(a: string | number, b: string | number) : number {
+    static defaultCompareFunction(a: string | number | IHash, b: string | number | IHash) : number {
         if (a === b) {
             return 0;
         }
@@ -30,7 +32,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    equal (a: string | number, b: string | number){
+    equal (a: string | number | IHash, b: string | number | IHash){
         return this.compare(a, b) === 0;
     }
 
@@ -39,7 +41,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    lessThan(a: string | number, b: string | number){
+    lessThan(a: string | number | IHash, b: string | number | IHash){
         return this.compare(a, b) < 0;
     }
 
@@ -48,7 +50,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    greaterThan(a: string | number, b: string | number){
+    greaterThan(a: string | number | IHash, b: string | number | IHash){
         return this.compare(a, b) > 0;
     }
 
@@ -57,7 +59,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    lessThanOrEqual(a: string | number, b: string | number){
+    lessThanOrEqual(a: string | number | IHash, b: string | number | IHash){
         return this.lessThan(a, b) || this.equal(a, b);
     }
 
@@ -66,7 +68,7 @@ export class Comparator {
      * @param a
      * @param b
      */
-    greaterThanOrEqual(a: string | number, b: string | number){
+    greaterThanOrEqual(a: string | number | IHash, b: string | number | IHash){
         return this.greaterThan(a, b) || this.equal(a, b);
     }
 
@@ -75,6 +77,6 @@ export class Comparator {
      */
     reverse(){
         const compareOriginal = this.compare;
-        this.compare = (a: string | number, b: string | number) => compareOriginal(b,a);
+        this.compare = (a: string | number | IHash, b: string | number | IHash) => compareOriginal(b,a);
     }
 }

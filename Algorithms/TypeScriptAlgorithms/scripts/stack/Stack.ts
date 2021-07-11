@@ -1,4 +1,5 @@
 ﻿import LinkedList from "../linked-list/LinkedList";
+import {IHash} from "../linked-list/LinkedListNode";
 
 export default class Stack {
     private linkedList: LinkedList;
@@ -31,7 +32,7 @@ export default class Stack {
      * the new value at the start of the linked list.
      * @param value
      */
-    push(value: string | number){
+    push(value: string | number | IHash){
         this.linkedList.prepend(value);
     }
 

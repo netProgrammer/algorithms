@@ -1,7 +1,12 @@
-﻿export default class LinkedListNode {
-    public readonly value: string | number;
+﻿export interface IHash {
+    key: string,
+    value: string | number
+}
+
+export class LinkedListNode {
+    public readonly value: string | number | IHash;
     next: LinkedListNode;
-    constructor(value: string | number, next: LinkedListNode = null) {
+    constructor(value: string | number | IHash, next: LinkedListNode = null) {
         this.value = value;
         this.next = next;
     }

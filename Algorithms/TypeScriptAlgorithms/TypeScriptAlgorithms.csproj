@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <TypeScriptCompile Include="scripts\app.ts" />
+      <TypeScriptCompile Include="scripts\hash-table\HashTable.ts" />
       <TypeScriptCompile Include="scripts\linked-list\LinkedList.ts" />
       <TypeScriptCompile Include="scripts\linked-list\LinkedListNode.ts" />
       <TypeScriptCompile Include="scripts\queue\Queue.ts" />

@@ -1,4 +1,5 @@
 ﻿import LinkedList from "../linked-list/LinkedList";
+import {IHash} from "../linked-list/LinkedListNode";
 
 export default class Queue {
     private linkedList: LinkedList;
@@ -26,7 +27,7 @@ export default class Queue {
      * This element will be processed after all elements ahead of it.
      * @param value
      */
-    enqueue(value: string | number) {
+    enqueue(value: string | number | IHash) {
         this.linkedList.append(value);
     }
 
